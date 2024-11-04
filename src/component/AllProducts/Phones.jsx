@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useOutletContext } from 'react-router-dom';
+import { ContextGadgets } from '../root/Root';
+import Card from '../sharedComponent/card/Card';
 
 const Phones = () => {
+    const gadgets = useContext(ContextGadgets);
+    const [category] = useOutletContext();
+    const phones = gadgets.filter(phone => phone.category === category);
+
     return (
-        <div>
-            <h1>phones...........</h1>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {
+                phones.map(gedget => <Card key={gedget.product_id} gedget={gedget}></Card>)
+            }
         </div>
     );
 };
