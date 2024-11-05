@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Card = ({ gedget }) => {
     const { product_image, product_title, price, product_id } = gedget;
@@ -11,8 +12,8 @@ const Card = ({ gedget }) => {
                 <h1 className='text-2xl font-bold'>{product_title}</h1>
                 <p className='text-xl text-[#09080F99]'>Price: {price}K</p>
             </div>
-            <div className='border-2 border-[#9538E2] rounded-full px-[20px] py-[10px] w-[120px] text-center'>
-                <button className='text-lg text-[#9538E2] font-bold'>Details</button>
+            <div>
+                <Link to={`/product/details/${product_id}`} className='text-lg text-[#9538E2] font-bold border-2 border-[#9538E2] rounded-full px-[20px] py-[10px] w-[120px] text-center'>Details</Link>
             </div>
         </div>
     );
@@ -20,24 +21,3 @@ const Card = ({ gedget }) => {
 
 export default Card;
 
-/* 
-    {
-      "product_id": "LTP001",
-      "product_title": "Dell XPS 13",
-      "product_image": "https://i.ibb.co.com/pQ8wX5h/Dell-XPS-13-Plus-1.webp",
-      "category": "laptops",
-      "price": 1199.99,
-      "description": "A powerful, lightweight laptop with stunning display.",
-      "specifications": [
-        "13.3-inch FHD display",
-        "Intel Core i7",
-        "16GB RAM",
-        "512GB SSD",
-        "Intel Iris Xe Graphics"
-      ],
-      "availability": true,
-      "rating": 4.5,
-      "color": "Silver",
-      "release_date": "2023-05-10"
-    },
-*/

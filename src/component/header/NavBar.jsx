@@ -1,9 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({ cartId, wishId }) => {
+
+
     return (
-        <div className="navbar flex justify-between w-11/12 mx-auto rounded-lg border-4 border-[#F6F6F6] bg-[#9538E2]">
+        <div className="navbar flex justify-between w-11/12 mx-auto px-2 pt-2 rounded-t-lg border-t-4 border-[#F6F6F6] bg-[#9538E2]">
             {/* lg hidden */}
             <div className="navbar-start">
                 <div className="dropdown">
@@ -52,8 +54,8 @@ const NavBar = () => {
                 <div class="dropdown dropdown-end">
                     <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                         <div class="indicator">
-                            <img className='h-6 w-6' src="https://cdn-icons-png.flaticon.com/128/6737/6737614.png" alt="" />
-                            <span class="badge badge-sm indicator-item">8</span>
+                            <i className="fa-solid fa-cart-shopping text-xl"></i>
+                            <span class="badge badge-sm indicator-item">{cartId.length}</span>
                         </div>
                     </div>
 
@@ -62,10 +64,10 @@ const NavBar = () => {
                         tabindex="0"
                         class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
                         <div class="card-body">
-                            <span class="text-lg font-bold">8 Items</span>
+                            <span class="text-lg font-bold">{cartId.length} Items</span>
                             <span class="text-info">Subtotal: $999</span>
                             <div class="card-actions">
-                                <button class="btn btn-primary btn-block">View cart</button>
+                                <Link to='/dashboard' class="btn btn-primary btn-block">View cart</Link>
                             </div>
                         </div>
                     </div>
@@ -74,10 +76,10 @@ const NavBar = () => {
 
                 {/* Wish List */}
                 <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                    <div class="indicator">
-                        <img className='h-6 w-6' src="https://cdn-icons-png.flaticon.com/128/7245/7245139.png" alt="" />
-                        <span class="badge badge-sm indicator-item">0</span>
-                    </div>
+                    <Link to='/dashboard' class="indicator">
+                        <i className="fa-solid fa-heart text-xl"></i>
+                        <span class="badge badge-sm indicator-item">{wishId.length}</span>
+                    </Link>
                 </div>
             </div>
         </div>
