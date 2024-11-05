@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const NavBar = ({ cartId, wishId }) => {
-
+const NavBar = ({ cartId, wishId, balance }) => {
 
     return (
         <div className="navbar flex justify-between w-11/12 mx-auto px-2 pt-2 rounded-t-lg border-t-4 border-[#F6F6F6] bg-[#9538E2]">
@@ -65,7 +64,7 @@ const NavBar = ({ cartId, wishId }) => {
                         class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
                         <div class="card-body">
                             <span class="text-lg font-bold">{cartId.length} Items</span>
-                            <span class="text-info">Subtotal: $999</span>
+                            <span class="text-info">Subtotal: {balance}K</span>
                             <div class="card-actions">
                                 <Link to='/dashboard' class="btn btn-primary btn-block">View cart</Link>
                             </div>

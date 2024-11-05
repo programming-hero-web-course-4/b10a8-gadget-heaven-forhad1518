@@ -1,4 +1,4 @@
-const CartProduct = ({ cart }) => {
+const CartProduct = ({ cart, handleDeletItem, index }) => {
     const { product_title, product_image, description, price } = cart;
     return (
         <div className='bg-white rounded-xl p-4'>
@@ -14,7 +14,7 @@ const CartProduct = ({ cart }) => {
                     </div>
                 </div>
                 <div>
-                    <button><i className="fa-regular fa-circle-xmark text-red-600 text-2xl"></i></button>
+                    <button onClick={() => handleDeletItem(index, price)}><i className="fa-regular fa-circle-xmark text-red-600 text-2xl"></i></button>
                 </div>
             </div>
             <div></div>

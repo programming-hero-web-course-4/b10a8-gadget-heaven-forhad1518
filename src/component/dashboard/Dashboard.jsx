@@ -4,8 +4,9 @@ import { Link, useOutletContext } from 'react-router-dom';
 import CartProduct from '../Cart/CartProduct';
 import WishList from '../WishList/WishList';
 
+
 const Dashboard = () => {
-    const [, cartId, , wishId] = useOutletContext()
+    const [, cartId, , wishId, balance, handleDeletItem] = useOutletContext()
     // console.log(cartId)
 
     // set toggle
@@ -43,7 +44,7 @@ const Dashboard = () => {
                     <h1 className='text-xl font-bold'>Cart</h1>
                 </div>
                 <div className='flex items-center gap-4'>
-                    <div className='text-xl font-bold'>Total cost: 999.99</div>
+                    <div className='text-xl font-bold'>Total cost: {balance}K</div>
                     <div className="space-x-4">
                         <Link className='border-[#9538E2] text-[#9538E2] border px-6 py-2 rounded-full'>Sort by Price</Link>
                         <Link className='bg-[#9538E2] text-white border-2 px-6 py-2 rounded-full'>Purchase</Link>
@@ -54,7 +55,7 @@ const Dashboard = () => {
             <br />
             <div className='w-11/12 mx-auto space-y-4'>
                 {
-                    toggle? cartId.map(cart => <CartProduct key={cart.product_id} cart={cart}></CartProduct>) : wishId.map(wishProduct => <WishList key={wishProduct.product_id} wishProduct={wishProduct}></WishList>)
+                    toggle? cartId.map((cart , index) => <CartProduct index={index} handleDeletItem={handleDeletItem} key={cart.product_id} cart={cart}></CartProduct>) : wishId.map(wishProduct => <WishList key={wishProduct.product_id} wishProduct={wishProduct}></WishList>)
                 }
             </div>
         </div>
