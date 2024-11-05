@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WishList = ({ wishProduct }) => {
+const WishList = ({ wishProduct, handleDeleteWish, index }) => {
     const { product_title, product_image, description, price } = wishProduct;
     return (
         <div className='bg-white rounded-xl p-4'>
@@ -16,7 +16,7 @@ const WishList = ({ wishProduct }) => {
                     </div>
                 </div>
                 <div>
-                    <button><i className="fa-regular fa-circle-xmark text-red-600 text-2xl"></i></button>
+                    <button onClick={() => handleDeleteWish(index)}><i className="fa-regular fa-circle-xmark text-red-600 text-2xl"></i></button>
                 </div>
             </div>
             <div></div>

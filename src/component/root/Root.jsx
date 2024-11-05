@@ -31,11 +31,16 @@ export default function Root() {
         setCardId(deleteItem)
         setBalance(balance - price);
     }
+
+    const handleDeleteWish = id => {
+        const deleteWishItem = wishId.filter((itemD, index) => index !== id);
+        setWishId(deleteWishItem);
+    }
     return (
         <>
             <ContextGadgets.Provider value={allGedgets}>
                 <NavBar cartId={cartId} wishId={wishId} balance={balance}></NavBar>
-                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem]}></Outlet>
+                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish]}></Outlet>
                 <Footer></Footer>
 
             </ContextGadgets.Provider>
