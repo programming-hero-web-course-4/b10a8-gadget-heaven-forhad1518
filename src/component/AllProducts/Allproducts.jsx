@@ -7,7 +7,7 @@ const Allproducts = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {
-                gedgets.map(gedget => <Card key={gedget.product_id} gedget={gedget}></Card>)
+                gedgets?.map(gedget => <Card key={gedget.product_id} gedget={gedget}></Card>)
             }
         </div>
     );

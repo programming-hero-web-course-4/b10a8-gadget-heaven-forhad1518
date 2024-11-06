@@ -41,7 +41,7 @@ const Datails = () => {
                                 <h1 className='font-bold'>Specification:</h1>
 
                                 {
-                                    specifications.map((specification , index) => <li key={index}>{specification}</li>)
+                                    specifications?.map((specification , index) => <li key={index}>{specification}</li>)
                                 }
                             </div>
                             <div>

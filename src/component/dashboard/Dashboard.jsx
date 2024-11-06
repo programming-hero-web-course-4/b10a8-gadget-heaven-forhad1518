@@ -55,7 +55,7 @@ const Dashboard = () => {
             <br />
             <div className='w-11/12 mx-auto space-y-4'>
                 {
-                    toggle? cartId.map((cart , index) => <CartProduct index={index} handleDeletItem={handleDeletItem} key={cart.product_id} cart={cart}></CartProduct>) : wishId.map((wishProduct, index) => <WishList index={index} handleDeleteWish={handleDeleteWish} key={wishProduct.product_id} wishProduct={wishProduct}></WishList>)
+                    toggle? cartId?.map((cart , index) => <CartProduct index={index} handleDeletItem={handleDeletItem} key={cart.product_id} cart={cart}></CartProduct>) : wishId.map((wishProduct, index) => <WishList index={index} handleDeleteWish={handleDeleteWish} key={wishProduct.product_id} wishProduct={wishProduct}></WishList>)
                 }
             </div>
         </div>

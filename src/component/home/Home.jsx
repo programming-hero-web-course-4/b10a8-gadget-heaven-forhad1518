@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Shared from '../sharedComponent/Shared';
 import { NavLink, Outlet } from 'react-router-dom';
+import banner from"../../assets/banner.jpg";
 
 const Home = () => {
     return (
@@ -16,7 +17,7 @@ const Home = () => {
                 <div className="w-8/12 mx-auto absolute top-[50%] left-[17%]">
                     <div className="border-white bg-[#ffffff2a] border-2 rounded-xl p-3 w-full">
                         <div className="newsletterBG rounded-xl text-center space-y-6">
-                            <img className='rounded-xl md:h-[400] lg:h-[550px] w-full object-cover' src="/src/assets/banner.jpg" alt="" />
+                            <img className='rounded-xl md:h-[400] lg:h-[550px] w-full object-cover' src={banner} alt="" />
                         </div>
                     </div>
                 </div>
