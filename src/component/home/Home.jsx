@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import Shared from '../sharedComponent/Shared';
 import { NavLink, Outlet } from 'react-router-dom';
 import banner from "../../assets/banner.jpg";
+import { clickLocation } from '../root/Root';
 
 const Home = () => {
+    clickLocation()
     return (
         <div className='w-11/12 mx-auto'>
             <div className='bg-[#9538E2] rounded-b-lg h-[550px] relative'>

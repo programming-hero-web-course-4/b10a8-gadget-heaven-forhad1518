@@ -1,14 +1,47 @@
-import React, { Children, createContext, useState } from 'react'
+import React, { Children, createContext, useEffect, useState } from 'react'
 import NavBar from '../header/NavBar'
 import Footer from '../footer/Footer'
-import { Outlet, useLoaderData } from 'react-router-dom'
+import { Outlet, useLoaderData, useLocation } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 
 
 
-export const ContextGadgets = createContext({ Children })
+export const ContextGadgets = createContext({ Children });
+// Set Title
+export const clickLocation = () => {
+    const path = useLocation();
+
+    useEffect(() => {
+        const getPath = path.pathname;
+
+        if (getPath === "/") {
+            document.title = "Gadget-Heaven || Home"
+        } else if (getPath === "/statistics") {
+            document.title = "Gadget-Heaven || Statistics"
+        } else if (getPath === "/dashboard") {
+            document.title = "Gadget-Heaven || Dashboard"
+        } else if (getPath === "/blog") {
+            document.title = "Gadget-Heaven || Blog"
+        } else if (getPath === "/home/laptops") {
+            document.title = "Gadget-Heaven || Laptops"
+        } else if (getPath === "/home/phones") {
+            document.title = "Gadget-Heaven || Phones"
+        } else if (getPath === "/home/accessories") {
+            document.title = "Gadget-Heaven || accessories"
+        } else if (getPath === "/home/smartwatches") {
+            document.title = "Gadget-Heaven || smartWatches"
+        } else if (getPath === "/home/macbook") {
+            document.title = "Gadget-Heaven || MacBook"
+        } else if (getPath === "/home/iphone") {
+            document.title = "Gadget-Heaven || iphone"
+        } else {
+            document.title = "Assignment_08-gadget-heaven"
+        }
+    }, [path])
+
+}
 
 export default function Root() {
     const allGedgets = useLoaderData();

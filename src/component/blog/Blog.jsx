@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import { ContextGadgets } from '../root/Root';
+import { clickLocation, ContextGadgets } from '../root/Root';
 import PostBlog from './PostBlog';
 import Shared from '../sharedComponent/Shared';
 
 const Blog = () => {
     const allGedgets = useContext(ContextGadgets);
-    console.log(allGedgets)
+    clickLocation()
     return (
         <div>
             <div className='bg-[#9538E2] p-[50px]'>

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { BarChart, Bar, Tooltip, Legend, CartesianGrid, XAxis, YAxis, ResponsiveContainer } from 'recharts';
 import Shared from '../sharedComponent/Shared';
-import { ContextGadgets } from '../root/Root';
+import { clickLocation, ContextGadgets } from '../root/Root';
 
 const Statistics = () => {
     const allGedgets = useContext(ContextGadgets)
+    clickLocation()
 
     const data = allGedgets.map(product => {
         const data = {

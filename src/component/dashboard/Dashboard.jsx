@@ -4,12 +4,13 @@ import { Link, useOutletContext } from 'react-router-dom';
 import CartProduct from '../Cart/CartProduct';
 import WishList from '../WishList/WishList';
 import modalImg from '../../assets/Group.png'
+import { clickLocation } from '../root/Root';
 
 
 
 const Dashboard = () => {
     const [, cartId, , wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart, handlePurchase, toggleBtn,toggle] = useOutletContext();
-    
+    clickLocation()
     return (
         <div>
             {/* First Container */}
