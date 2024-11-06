@@ -39,13 +39,13 @@ const Dashboard = () => {
             </div>
             <br />
             {/* Second Container */}
-            <div className='w-11/12 mx-auto flex justify-between items-center'>
+            <div className='w-11/12 mx-auto flex gap-4 justify-between items-center'>
                 <div>
                     <h1 className='text-xl font-bold'>Cart</h1>
                 </div>
                 <div className='flex items-center gap-4'>
                     <div className='text-xl font-bold'>Total cost: {balance}K</div>
-                    <div className="space-x-4">
+                    <div className="flex flex-wrap justify-center gap-3">
                         <Link className='border-[#9538E2] text-[#9538E2] border px-6 py-2 rounded-full'>Sort by Price</Link>
                         <Link className='bg-[#9538E2] text-white border-2 px-6 py-2 rounded-full'>Purchase</Link>
                     </div>

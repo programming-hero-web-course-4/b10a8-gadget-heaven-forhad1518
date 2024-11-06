@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
-import { useOutletContext, useParams } from 'react-router-dom';
+import { useLocation, useOutletContext } from 'react-router-dom';
 import { ContextGadgets } from '../root/Root';
 import Card from '../sharedComponent/card/Card';
 
 const Accessories = () => {
     const gadgets = useContext(ContextGadgets);
-    const [category] = useOutletContext();
-    const accessories = gadgets.filter(accessorie => accessorie.category === category);
+    const location = useLocation()
+    const targetPath = location.pathname.split('/').filter(Boolean).pop();
+    const accessories = gadgets.filter(accessorie => accessorie.category === targetPath);
 
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>

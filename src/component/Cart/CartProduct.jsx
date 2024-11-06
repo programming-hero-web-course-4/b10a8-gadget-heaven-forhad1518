@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CartProduct = ({ cart, handleDeletItem, index }) => {
     const { product_title, product_image, description, price } = cart;
     return (
@@ -13,8 +15,9 @@ const CartProduct = ({ cart, handleDeletItem, index }) => {
                         <p>Price: {price}K</p>
                     </div>
                 </div>
+                
                 <div>
-                    <button onClick={() => handleDeletItem(index, price)}><i className="fa-regular fa-circle-xmark text-red-600 text-2xl"></i></button>
+                    <Link onClick={() => handleDeletItem(index, price)}><i className="fa-regular fa-circle-xmark text-red-600 text-2xl"></i></Link>
                 </div>
             </div>
             <div></div>

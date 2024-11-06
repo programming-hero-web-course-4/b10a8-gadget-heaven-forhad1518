@@ -14,16 +14,16 @@ const Datails = () => {
     const {product_title, price, product_image, availability, description, specifications, rating } = gadget;
 
     return (
-        <div className='bg-[#9538E2] rounded-b-lg h-[380px] mb-[200px]'>
+        <div className='bg-[#9538E2] rounded-b-lg h-[380px] mb-[500px] md:mb-[300px] relative'>
             <br />
             <div className='mb-[80px] text-center'>
                 <Shared title={"Product Details"} details={"Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"}></Shared>
                 <br />
             </div>
             {/*  */}
-            <div className="w-8/12 mx-auto absolute top-[200px] left-[220px]">
+            <div className="w-8/12 mx-auto absolute top-[40%] md:top-[50%] left-[17%]">
                 <div className="border-white bg-white border-2 rounded-xl p-3 w-full">
-                    <div className="flex gap-6 newsletterBG rounded-xl space-y-6">
+                    <div className="md:flex gap-6 newsletterBG rounded-xl space-y-6">
                         <div>
                             <img className='w-[400px]' src={product_image} alt="" />
                         </div>
@@ -52,13 +52,13 @@ const Datails = () => {
                                 <button onClick={() => handleCartBtn(product_id, price)} className={`${availability? "font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center": "hidden"}`}>Add To Card <i className="fa-solid fa-cart-shopping"></i></button>
                                 <button onClick={() => handleWishBtn(product_id)} className="font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center">
                                 <i className="fa-solid fa-heart text-xl"></i></button>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             {/*  */}
+            <br />
             <br />
         </div>
     );

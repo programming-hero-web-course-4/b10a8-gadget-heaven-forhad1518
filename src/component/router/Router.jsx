@@ -43,7 +43,7 @@ const router = createBrowserRouter([
                         element: <Accessories></Accessories>
                     },
                     {
-                        path: '/home/smart-watches',
+                        path: '/home/smartwatches',
                         element: <SmartWatches></SmartWatches>
                     },
                     {
