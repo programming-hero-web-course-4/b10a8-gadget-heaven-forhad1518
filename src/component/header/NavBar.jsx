@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
-const NavBar = ({ cartId, wishId, balance }) => {
+const NavBar = ({ cartId, wishId, balance, setToggle }) => {
     const location = useLocation()
     return (
-        <div className={`navbar flex justify-between w-11/12 mx-auto px-2 pt-2 rounded-t-lg border-t-4 border-[#F6F6F6] ${location.pathname === "/" ? 'bg-[#9538E2]':'bg-white' } `}>
+        <div className={`navbar flex justify-between w-11/12 mx-auto px-2 pt-2 rounded-t-lg border-t-4 border-[#F6F6F6] ${location.pathname === "/" ? 'bg-[#9538E2]' : 'bg-white'} `}>
             {/* lg hidden */}
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 text-[#FFFFFF] "
+                            className="h-5 w-5 text-[#000000] "
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor">
@@ -30,11 +30,11 @@ const NavBar = ({ cartId, wishId, balance }) => {
                         <NavLink to='/' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Home</NavLink>
                         <NavLink to='statistics' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Statistics</NavLink>
                         <NavLink to='dashboard' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Dashboard</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Blog</NavLink>
+                        <NavLink to='blog' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Blog</NavLink>
                     </ul>
                 </div>
                 <div>
-                    <Link to='/' className={`btn btn-ghost text-xl ${location.pathname === "/" ? 'text-white':'text-black' }`}>Gedget-Heaven</Link>
+                    <Link to='/' className={`btn btn-ghost text-xl ${location.pathname === "/" ? 'text-white' : 'text-black'}`}>Gedget-Heaven</Link>
                 </div>
             </div>
 
@@ -45,7 +45,7 @@ const NavBar = ({ cartId, wishId, balance }) => {
                     <NavLink to='/' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Home</NavLink>
                     <NavLink to='statistics' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Statistics</NavLink>
                     <NavLink to='dashboard' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Dashboard</NavLink>
-                    <NavLink className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Blog</NavLink>
+                    <NavLink to='blog' className={({ isActive }) => isActive ? 'text-red-400 underline font-bold' : 'text-black'}>Blog</NavLink>
                 </div>
             </div>
 
@@ -74,10 +74,9 @@ const NavBar = ({ cartId, wishId, balance }) => {
                     </div>
                 </div>
 
-
                 {/* Wish List */}
                 <div tabindex="0" role="button" className="btn btn-ghost btn-circle">
-                    <Link to='/dashboard' className="indicator">
+                    <Link to='/dashboard' onClick={() => setToggle(false)} className="indicator">
                         <i className="fa-solid fa-heart text-xl"></i>
                         <span className="badge badge-sm indicator-item">{wishId.length}</span>
                     </Link>

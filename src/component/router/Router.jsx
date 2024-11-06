@@ -12,6 +12,7 @@ import Accessories from "../AllProducts/Accessories";
 import SmartWatches from "../AllProducts/SmartWatches";
 import MacBook from "../AllProducts/MacBook";
 import Iphone from "../AllProducts/Iphone";
+import Blog from "../blog/Blog";
 
 
 
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <Dashboard></Dashboard>
+            },
+            {
+                path:'/blog',
+                element: <Blog></Blog>
             },
             {
                 path: '/product/details/:product_id',

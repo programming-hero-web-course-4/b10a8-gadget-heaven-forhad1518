@@ -4,7 +4,7 @@ const WishList = ({ wishProduct, handleDeleteWish, index, handleWishAddCart }) =
     const { product_id, product_title, product_image, description, price, availability } = wishProduct;
     return (
         <div>
-            <div className='bg-white rounded-xl p-4'>
+            <div className='bg-white rounded-xl p-4 space-y-3'>
                 <div className="flex justify-between">
                     <div className="flex gap-4 items-center">
                         <div>

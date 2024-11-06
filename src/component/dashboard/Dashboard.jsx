@@ -8,20 +8,8 @@ import modalImg from '../../assets/Group.png'
 
 
 const Dashboard = () => {
-    const [, cartId, , wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart, handlePurchase] = useOutletContext()
-    // console.log(cartId)
-
-    // set toggle
-    const [toggle, setToggle] = useState(true)
-
-    // Set toggle handle
-    const toggleBtn = (value) => {
-        if (value === true) {
-            setToggle(true)
-        } else {
-            setToggle(false)
-        }
-    }
+    const [, cartId, , wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart, handlePurchase, toggleBtn,toggle] = useOutletContext();
+    
     return (
         <div>
             {/* First Container */}

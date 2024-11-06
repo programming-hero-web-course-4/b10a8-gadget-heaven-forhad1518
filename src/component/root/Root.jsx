@@ -131,11 +131,23 @@ export default function Root() {
             setCardId([])
         }
     }
+
+    // set toggle
+    const [toggle, setToggle] = useState(true)
+
+    // Set toggle handle
+    const toggleBtn = (value) => {
+        if (value === true) {
+            setToggle(true)
+        } else {
+            setToggle(false)
+        }
+    }
     return (
         <>
             <ContextGadgets.Provider value={allGedgets}>
-                <NavBar cartId={cartId} wishId={wishId} balance={balance}></NavBar>
-                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart, handlePurchase]}></Outlet>
+                <NavBar cartId={cartId} wishId={wishId} balance={balance} setToggle={setToggle}></NavBar>
+                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart, handlePurchase, toggleBtn, toggle]}></Outlet>
                 <Footer></Footer>
                 <ToastContainer></ToastContainer>
             </ContextGadgets.Provider>
