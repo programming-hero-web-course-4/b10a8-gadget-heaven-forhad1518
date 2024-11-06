@@ -16,6 +16,8 @@ export default function Root() {
     const [wishId, setWishId] = useState([]);
     const [balance, setBalance] = useState(0)
 
+
+    // Cart Buttton functionality
     const handleCartBtn = (value, price) => {
         const getCartItem = allGedgets.find(gedget => gedget.product_id === value);
         const newCartItem = [...cartId, getCartItem];
@@ -31,6 +33,7 @@ export default function Root() {
         setBalance(balance + price)
     }
 
+    // Wish Buttton functionality
     const handleWishBtn = value => {
         const getWishItem = allGedgets.find(gedget => gedget.product_id === value);
         const newWishItem = [...wishId, getWishItem];
@@ -56,15 +59,20 @@ export default function Root() {
             setWishId(newWishItem)
         }
     }
+
     // added wist to cart
     const handleWishAddCart = (id, price, index) => {
         handleCartBtn(id, price)
         handleRemoveWish(index)
     }
+
+    // when click by cart button in wish area than the function remove item 
     const handleRemoveWish = id => {
         const removeWishItem = wishId.filter((itemD, index) => index !== id);
         setWishId(removeWishItem);
     }
+
+    // delete from cart
     const handleDeletItem = (id, price) => {
         const deleteItem = cartId.filter((itemD, index) => index !== id);
         setCardId(deleteItem)
@@ -78,6 +86,7 @@ export default function Root() {
         setBalance(balance - price);
     }
 
+    // delete from wish 
     const handleDeleteWish = id => {
         const deleteWishItem = wishId.filter((itemD, index) => index !== id);
 
@@ -90,25 +99,46 @@ export default function Root() {
         })
         setWishId(deleteWishItem);
     }
+
+    // Handle Sort Price
     const handleSortPriceBtn = () => {
         cartId.slice(0);
         cartId.sort(function (a, b) {
             return b.price - a.price;
         })
     }
+
+    // purchase button 
+    const handlePurchase = () => {
+        if (balance === 0) {
+            toast.warning("Please choose any Product", {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: true,
+                pauseOnHover: false,
+                theme: 'colored',
+            })
+            return
+        } else {
+            document.getElementById('my_modal_1').showModal()
+            toast.success("Purchase successful", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: true,
+                pauseOnHover: false,
+                theme: 'colored',
+            })
+            setCardId([])
+        }
+    }
     return (
         <>
             <ContextGadgets.Provider value={allGedgets}>
                 <NavBar cartId={cartId} wishId={wishId} balance={balance}></NavBar>
-                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart]}></Outlet>
+                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart, handlePurchase]}></Outlet>
                 <Footer></Footer>
                 <ToastContainer></ToastContainer>
             </ContextGadgets.Provider>
         </>
     )
 }
-// const sortPrice = (pets) =>{
-//     pets.slice(0);
-//     pets.sort(function(a,b){
-//         return b.price - a.price;
-//     })
