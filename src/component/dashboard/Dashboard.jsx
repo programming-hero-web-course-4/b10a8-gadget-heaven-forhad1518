@@ -5,6 +5,7 @@ import CartProduct from '../Cart/CartProduct';
 import WishList from '../WishList/WishList';
 
 
+
 const Dashboard = () => {
     const [, cartId, , wishId, balance, handleDeletItem, handleDeleteWish] = useOutletContext()
     // console.log(cartId)

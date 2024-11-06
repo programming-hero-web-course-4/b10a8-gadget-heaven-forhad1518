@@ -2,6 +2,9 @@ import React, { Children, createContext, useState } from 'react'
 import NavBar from '../header/NavBar'
 import Footer from '../footer/Footer'
 import { Outlet, useLoaderData } from 'react-router-dom'
+import { toast , ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -16,6 +19,14 @@ export default function Root() {
     const handleCartBtn = (value, price) => {
         const getCartItem = allGedgets.find(gedget => gedget.product_id === value);
         const newCartItem = [...cartId, getCartItem];
+
+        toast.success("added cart successful", {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: true,
+            pauseOnHover: false,
+            theme: 'colored',
+        })
         setCardId(newCartItem);
         setBalance(balance + price)
     }
@@ -23,17 +34,52 @@ export default function Root() {
     const handleWishBtn = value => {
         const getWishItem = allGedgets.find(gedget => gedget.product_id === value);
         const newWishItem = [...wishId, getWishItem];
-        setWishId(newWishItem)
+
+        const againAddWish = wishId.find(match => match.product_id === value)
+        if (againAddWish) {
+            toast.error("Already Item wishlist!!", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: true,
+                pauseOnHover: false,
+                theme: 'colored',
+            })
+            return
+        } else {
+            toast.success("Added wishlist successful", {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: true,
+                pauseOnHover: false,
+                theme: 'colored',
+            })
+            setWishId(newWishItem)
+        }
     }
 
     const handleDeletItem = (id, price) => {
         const deleteItem = cartId.filter((itemD, index) => index !== id);
         setCardId(deleteItem)
+        toast.warning("remove from cart", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            pauseOnHover: false,
+            theme: 'colored',
+        })
         setBalance(balance - price);
     }
 
     const handleDeleteWish = id => {
         const deleteWishItem = wishId.filter((itemD, index) => index !== id);
+
+        toast.warning("remove from wishlist", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: true,
+            pauseOnHover: false,
+            theme: 'colored',
+        })
         setWishId(deleteWishItem);
     }
     return (
@@ -42,7 +88,7 @@ export default function Root() {
                 <NavBar cartId={cartId} wishId={wishId} balance={balance}></NavBar>
                 <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish]}></Outlet>
                 <Footer></Footer>
-
+                <ToastContainer></ToastContainer>
             </ContextGadgets.Provider>
         </>
     )

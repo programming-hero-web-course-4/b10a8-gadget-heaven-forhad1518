@@ -6,6 +6,7 @@ import { ContextGadgets } from '../root/Root';
 
 
 
+
 const Datails = () => {
     const gadgets = useContext(ContextGadgets);
     const { product_id } = useParams();
@@ -52,6 +53,7 @@ const Datails = () => {
                                 <button onClick={() => handleCartBtn(product_id, price)} className={`${availability? "font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center": "hidden"}`}>Add To Card <i className="fa-solid fa-cart-shopping"></i></button>
                                 <button onClick={() => handleWishBtn(product_id)} className="font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center">
                                 <i className="fa-solid fa-heart text-xl"></i></button>
+                                
                             </div>
                         </div>
                     </div>

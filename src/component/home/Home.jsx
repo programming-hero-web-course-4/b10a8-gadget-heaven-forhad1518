@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Shared from '../sharedComponent/Shared';
 import { NavLink, Outlet } from 'react-router-dom';
-import banner from"../../assets/banner.jpg";
+import banner from "../../assets/banner.jpg";
 
 const Home = () => {
     return (
@@ -12,6 +12,7 @@ const Home = () => {
                     <Shared title={"Upgrade Your Tech Accessorize with Gadget Heaven Accessories"} details={"Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"}></Shared>
                     <br />
                     <button className='btn text-lg text-[#9538E2] bg-white  font-bold border-2 border-[#9538E2] rounded-full px-[20px] py-[10px] text-center'>Shop Now</button>
+                    
                 </div>
                 {/*  */}
                 <div className="w-8/12 mx-auto absolute top-[50%] left-[17%]">
