@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import Shared from '../sharedComponent/Shared';
 import { useOutletContext, useParams } from 'react-router-dom';
 import { ContextGadgets } from '../root/Root';
+import ReactStars from "react-rating-stars-component";
 
 
 
@@ -10,9 +11,15 @@ import { ContextGadgets } from '../root/Root';
 const Datails = () => {
     const gadgets = useContext(ContextGadgets);
     const { product_id } = useParams();
-    const [handleCartBtn, ,handleWishBtn] = useOutletContext();
+    const [handleCartBtn, , handleWishBtn] = useOutletContext();
     const gadget = gadgets.find(gedget => gedget.product_id === product_id);
-    const {product_title, price, product_image, availability, description, specifications, rating } = gadget;
+    const { product_title, price, product_image, availability, description, specifications, rating } = gadget;
+    const firstExample = {
+        size: 30,
+        value: rating,
+        edit: false,
+        isHalf: true
+    };
 
     return (
         <div className='bg-[#9538E2] rounded-b-lg h-[380px] mb-[500px] md:mb-[300px] relative'>
@@ -42,18 +49,20 @@ const Datails = () => {
                                 <h1 className='font-bold'>Specification:</h1>
 
                                 {
-                                    specifications?.map((specification , index) => <li key={index}>{specification}</li>)
+                                    specifications?.map((specification, index) => <li key={index}>{specification}</li>)
                                 }
                             </div>
                             <div>
-                                <h1 className='font-bold'>Rating:</h1>
-                                <p>⭐ {rating}</p>
+                                <h1 className='font-bold'>Rating: {rating}</h1>
+                                <p>
+                                    <ReactStars {...firstExample}></ReactStars>
+                                </p>
                             </div>
                             <div className='space-x-3'>
-                                <button onClick={() => handleCartBtn(product_id, price)} className={`${availability? "font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center": "hidden"}`}>Add To Card <i className="fa-solid fa-cart-shopping"></i></button>
+                                <button onClick={() => handleCartBtn(product_id, price)} className={`${availability ? "font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center" : "hidden"}`}>Add To Card <i className="fa-solid fa-cart-shopping"></i></button>
                                 <button onClick={() => handleWishBtn(product_id)} className="font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center">
-                                <i className="fa-solid fa-heart text-xl"></i></button>
-                                
+                                    <i className="fa-solid fa-heart text-xl"></i></button>
+
                             </div>
                         </div>
                     </div>
