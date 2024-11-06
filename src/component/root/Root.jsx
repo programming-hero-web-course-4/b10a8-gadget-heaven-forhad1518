@@ -2,7 +2,7 @@ import React, { Children, createContext, useState } from 'react'
 import NavBar from '../header/NavBar'
 import Footer from '../footer/Footer'
 import { Outlet, useLoaderData } from 'react-router-dom'
-import { toast , ToastContainer } from 'react-toastify'
+import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -82,15 +82,25 @@ export default function Root() {
         })
         setWishId(deleteWishItem);
     }
+    const handleSortPriceBtn = () => {
+        cartId.slice(0);
+        cartId.sort(function (a, b) {
+            return b.price - a.price;
+        })
+    }
     return (
         <>
             <ContextGadgets.Provider value={allGedgets}>
                 <NavBar cartId={cartId} wishId={wishId} balance={balance}></NavBar>
-                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish]}></Outlet>
+                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn]}></Outlet>
                 <Footer></Footer>
                 <ToastContainer></ToastContainer>
             </ContextGadgets.Provider>
         </>
     )
 }
-
+// const sortPrice = (pets) =>{
+//     pets.slice(0);
+//     pets.sort(function(a,b){
+//         return b.price - a.price;
+//     })

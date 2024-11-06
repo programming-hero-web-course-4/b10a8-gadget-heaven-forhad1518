@@ -1,190 +1,190 @@
 [
-    {
-      "product_id": "LTP001",
-      "product_title": "Dell XPS 13",
-      "product_image": "https://i.ibb.co.com/pQ8wX5h/Dell-XPS-13-Plus-1.webp",
-      "category": "laptops",
-      "price": 1199.99,
-      "description": "A powerful, lightweight laptop with stunning display.",
-      "specifications": [
-        "13.3-inch FHD display",
-        "Intel Core i7",
-        "16GB RAM",
-        "512GB SSD",
-        "Intel Iris Xe Graphics"
-      ],
-      "availability": true,
-      "rating": 4.5,
-      "color": "Silver",
-      "release_date": "2023-05-10"
-    },
-    {
-      "product_id": "LTP002",
-      "product_title": "HP Spectre x360",
-      "product_image": "https://i.ibb.co.com/F5mpH8P/spectrex36013-2019-14.jpg",
-      "category": "laptops",
-      "price": 1349.99,
-      "description": "2-in-1 laptop with excellent performance and premium design.",
-      "specifications": [
-        "13.5-inch OLED display",
-        "Intel Core i7",
-        "16GB RAM",
-        "512GB SSD",
-        "Intel Iris Xe Graphics"
-      ],
-      "availability": true,
-      "rating": 4.6,
-      "color": "Nightfall Black",
-      "release_date": "2022-08-20"
-    },
-    {
-      "product_id": "LTP003",
-      "product_title": "Apple MacBook Air M2",
-      "product_image": "https://i.ibb.co.com/MpgJWmx/CMC-1580.webp",
-      "category": "laptops",
-      "price": 1199.99,
-      "description": "Ultra-light laptop powered by Apple's M2 chip.",
-      "specifications": [
-        "13.6-inch Liquid Retina display",
-        "Apple M2 chip",
-        "8GB RAM",
-        "256GB SSD",
-        "macOS Monterey"
-      ],
-      "availability": true,
-      "rating": 4.8,
-      "color": "Space Gray",
-      "release_date": "2022-06-24"
-    },
-    {
-      "product_id": "LTP004",
-      "product_title": "Lenovo ThinkPad X1 Carbon",
-      "product_image": "https://i.ibb.co.com/b2FJVSb/Lenovo-Think-Pad-X1-Carbon-Gen-11-2023-MC-Solution-BD-1200x675.webp",
-      "category": "laptops",
-      "price": 1499.99,
-      "description": "Lightweight business laptop with excellent keyboard and performance.",
-      "specifications": [
-        "14-inch UHD display",
-        "Intel Core i7",
-        "16GB RAM",
-        "512GB SSD",
-        "Intel Iris Xe Graphics"
-      ],
-      "availability": false,
-      "rating": 4.7,
-      "color": "Black",
-      "release_date": "2023-03-12"
-    },
-    {
-      "product_id": "LTP005",
-      "product_title": "Acer Swift 3",
-      "product_image": "https://i.ibb.co.com/48ydjvJ/maxresdefault.jpg",
-      "category": "laptops",
-      "price": 699.99,
-      "description": "Budget-friendly laptop with solid performance for everyday use.",
-      "specifications": [
-        "14-inch FHD display",
-        "AMD Ryzen 7",
-        "8GB RAM",
-        "512GB SSD",
-        "AMD Radeon Graphics"
-      ],
-      "availability": true,
-      "rating": 4.4,
-      "color": "Silver",
-      "release_date": "2022-05-15"
-    },
-    {
-      "product_id": "PHN001",
-      "product_title": "Samsung Galaxy S21",
-      "product_image": "https://i.ibb.co.com/8cD1qQN/samsung-galaxy-s21-s21-et-s21-ultra-officialisation.webp",
-      "category": "phones",
-      "price": 799.99,
-      "description": "A high-end smartphone with pro-grade camera and performance.",
-      "specifications": [
-        "6.2-inch Dynamic AMOLED display",
-        "Exynos 2100",
-        "8GB RAM",
-        "128GB Storage",
-        "Triple Rear Camera"
-      ],
-      "availability": true,
-      "rating": 4.7,
-      "color": "Phantom Gray",
-      "release_date": "2021-01-29"
-    },
-    {
-      "product_id": "ACC001",
-      "product_title": "Anker PowerCore 10000",
-      "product_image": "https://i.ibb.co.com/DVNQyFq/images.jpg",
-      "category": "accessories",
-      "price": 24.99,
-      "description": "Compact and powerful 10000mAh portable charger.",
-      "specifications": [
-        "10000mAh Capacity",
-        "Compact size",
-        "Fast charging support",
-        "USB Output"
-      ],
-      "availability": true,
-      "rating": 4.6,
-      "color": "Black",
-      "warranty": "18 months"
-    },
-    {
-      "product_id": "SWT001",
-      "product_title": "Apple Watch Series 7",
-      "product_image": "https://i.ibb.co.com/qDGWqbq/EDA006893723-O.jpg",
-      "category": "smartwatches",
-      "price": 399.99,
-      "description": "Advanced health monitoring and enhanced features.",
-      "specifications": [
-        "1.61-inch LTPO OLED display",
-        "Blood Oxygen Monitoring",
-        "ECG functionality",
-        "Up to 18 hours battery life"
-      ],
-      "availability": false,
-      "rating": 4.8,
-      "color": "Midnight",
-      "release_date": "2021-09-14"
-    },
-    {
-      "product_id": "MBK001",
-      "product_title": "MacBook Pro 14-inch",
-      "product_image": "https://i.ibb.co.com/KmR57Sd/hq720.jpg",
-      "category": "macbook",
-      "price": 1999.99,
-      "description": "Apple’s powerful laptop with M1 Pro chip.",
-      "specifications": [
-        "14.2-inch Liquid Retina XDR display",
-        "Apple M1 Pro chip",
-        "16GB Unified Memory",
-        "512GB SSD",
-        "macOS Monterey"
-      ],
-      "availability": true,
-      "rating": 4.9,
-      "color": "Space Gray",
-      "release_date": "2021-10-18"
-    },
-    {
-      "product_id": "IPH001",
-      "product_title": "iPhone 13 Pro",
-      "product_image": "https://i.ibb.co.com/FxnnxX1/hq720-1.jpg",
-      "category": "iphone",
-      "price": 999.99,
-      "description": "Advanced smartphone with triple-camera system and 5G capability.",
-      "specifications": [
-        "6.1-inch Super Retina XDR display",
-        "A15 Bionic chip",
-        "128GB Storage",
-        "Triple Rear Camera",
-        "5G capable"
-      ],
-      "availability": true,
-      "rating": 4.8,
-      "color": "Graphite",
-      "release_date": "2021-09-24"
-    }
-  ]
+  {
+    "product_id": "LTP001",
+    "product_title": "Dell XPS 13",
+    "product_image": "https://i.ibb.co.com/pQ8wX5h/Dell-XPS-13-Plus-1.webp",
+    "category": "laptops",
+    "price": 1199,
+    "description": "A powerful, lightweight laptop with stunning display.",
+    "specifications": [
+      "13.3-inch FHD display",
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "Intel Iris Xe Graphics"
+    ],
+    "availability": true,
+    "rating": 4.5,
+    "color": "Silver",
+    "release_date": "2023-05-10"
+  },
+  {
+    "product_id": "LTP002",
+    "product_title": "HP Spectre x360",
+    "product_image": "https://i.ibb.co.com/F5mpH8P/spectrex36013-2019-14.jpg",
+    "category": "laptops",
+    "price": 1349,
+    "description": "2-in-1 laptop with excellent performance and premium design.",
+    "specifications": [
+      "13.5-inch OLED display",
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "Intel Iris Xe Graphics"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "color": "Nightfall Black",
+    "release_date": "2022-08-20"
+  },
+  {
+    "product_id": "LTP003",
+    "product_title": "Apple MacBook Air M2",
+    "product_image": "https://i.ibb.co.com/MpgJWmx/CMC-1580.webp",
+    "category": "laptops",
+    "price": 1199,
+    "description": "Ultra-light laptop powered by Apple's M2 chip.",
+    "specifications": [
+      "13.6-inch Liquid Retina display",
+      "Apple M2 chip",
+      "8GB RAM",
+      "256GB SSD",
+      "macOS Monterey"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "color": "Space Gray",
+    "release_date": "2022-06-24"
+  },
+  {
+    "product_id": "LTP004",
+    "product_title": "Lenovo ThinkPad X1 Carbon",
+    "product_image": "https://i.ibb.co.com/b2FJVSb/Lenovo-Think-Pad-X1-Carbon-Gen-11-2023-MC-Solution-BD-1200x675.webp",
+    "category": "laptops",
+    "price": 1499,
+    "description": "Lightweight business laptop with excellent keyboard and performance.",
+    "specifications": [
+      "14-inch UHD display",
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "Intel Iris Xe Graphics"
+    ],
+    "availability": false,
+    "rating": 4.7,
+    "color": "Black",
+    "release_date": "2023-03-12"
+  },
+  {
+    "product_id": "LTP005",
+    "product_title": "Acer Swift 3",
+    "product_image": "https://i.ibb.co.com/48ydjvJ/maxresdefault.jpg",
+    "category": "laptops",
+    "price": 699,
+    "description": "Budget-friendly laptop with solid performance for everyday use.",
+    "specifications": [
+      "14-inch FHD display",
+      "AMD Ryzen 7",
+      "8GB RAM",
+      "512GB SSD",
+      "AMD Radeon Graphics"
+    ],
+    "availability": true,
+    "rating": 4.4,
+    "color": "Silver",
+    "release_date": "2022-05-15"
+  },
+  {
+    "product_id": "PHN001",
+    "product_title": "Samsung Galaxy S21",
+    "product_image": "https://i.ibb.co.com/8cD1qQN/samsung-galaxy-s21-s21-et-s21-ultra-officialisation.webp",
+    "category": "phones",
+    "price": 799,
+    "description": "A high-end smartphone with pro-grade camera and performance.",
+    "specifications": [
+      "6.2-inch Dynamic AMOLED display",
+      "Exynos 2100",
+      "8GB RAM",
+      "128GB Storage",
+      "Triple Rear Camera"
+    ],
+    "availability": true,
+    "rating": 4.7,
+    "color": "Phantom Gray",
+    "release_date": "2021-01-29"
+  },
+  {
+    "product_id": "ACC001",
+    "product_title": "Anker PowerCore 10000",
+    "product_image": "https://i.ibb.co.com/DVNQyFq/images.jpg",
+    "category": "accessories",
+    "price": 24,
+    "description": "Compact and powerful 10000mAh portable charger.",
+    "specifications": [
+      "10000mAh Capacity",
+      "Compact size",
+      "Fast charging support",
+      "USB Output"
+    ],
+    "availability": true,
+    "rating": 4.6,
+    "color": "Black",
+    "warranty": "18 months"
+  },
+  {
+    "product_id": "SWT001",
+    "product_title": "Apple Watch Series 7",
+    "product_image": "https://i.ibb.co.com/qDGWqbq/EDA006893723-O.jpg",
+    "category": "smartwatches",
+    "price": 399,
+    "description": "Advanced health monitoring and enhanced features.",
+    "specifications": [
+      "1.61-inch LTPO OLED display",
+      "Blood Oxygen Monitoring",
+      "ECG functionality",
+      "Up to 18 hours battery life"
+    ],
+    "availability": false,
+    "rating": 4.8,
+    "color": "Midnight",
+    "release_date": "2021-09-14"
+  },
+  {
+    "product_id": "MBK001",
+    "product_title": "MacBook Pro 14-inch",
+    "product_image": "https://i.ibb.co.com/KmR57Sd/hq720.jpg",
+    "category": "macbook",
+    "price": 1999,
+    "description": "Apple’s powerful laptop with M1 Pro chip.",
+    "specifications": [
+      "14.2-inch Liquid Retina XDR display",
+      "Apple M1 Pro chip",
+      "16GB Unified Memory",
+      "512GB SSD",
+      "macOS Monterey"
+    ],
+    "availability": true,
+    "rating": 4.9,
+    "color": "Space Gray",
+    "release_date": "2021-10-18"
+  },
+  {
+    "product_id": "IPH001",
+    "product_title": "iPhone 13 Pro",
+    "product_image": "https://i.ibb.co.com/FxnnxX1/hq720-1.jpg",
+    "category": "iphone",
+    "price": 999,
+    "description": "Advanced smartphone with triple-camera system and 5G capability.",
+    "specifications": [
+      "6.1-inch Super Retina XDR display",
+      "A15 Bionic chip",
+      "128GB Storage",
+      "Triple Rear Camera",
+      "5G capable"
+    ],
+    "availability": true,
+    "rating": 4.8,
+    "color": "Graphite",
+    "release_date": "2021-09-24"
+  }
+]

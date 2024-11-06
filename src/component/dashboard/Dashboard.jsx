@@ -7,7 +7,7 @@ import WishList from '../WishList/WishList';
 
 
 const Dashboard = () => {
-    const [, cartId, , wishId, balance, handleDeletItem, handleDeleteWish] = useOutletContext()
+    const [ , cartId, , wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn] = useOutletContext()
     // console.log(cartId)
 
     // set toggle
@@ -47,7 +47,7 @@ const Dashboard = () => {
                 <div className='flex items-center gap-4'>
                     <div className='text-xl font-bold'>Total cost: {balance}K</div>
                     <div className="flex flex-wrap justify-center gap-3">
-                        <Link className='border-[#9538E2] text-[#9538E2] border px-6 py-2 rounded-full'>Sort by Price</Link>
+                        <Link onClick={handleSortPriceBtn} className='border-[#9538E2] text-[#9538E2] border px-6 py-2 rounded-full'>Sort by Price</Link>
                         <Link className='bg-[#9538E2] text-white border-2 px-6 py-2 rounded-full'>Purchase</Link>
                     </div>
                 </div>
