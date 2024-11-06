@@ -7,7 +7,7 @@ import WishList from '../WishList/WishList';
 
 
 const Dashboard = () => {
-    const [ , cartId, , wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn] = useOutletContext()
+    const [, cartId, , wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart] = useOutletContext()
     // console.log(cartId)
 
     // set toggle
@@ -56,7 +56,7 @@ const Dashboard = () => {
             <br />
             <div className='w-11/12 mx-auto space-y-4'>
                 {
-                    toggle? cartId?.map((cart , index) => <CartProduct index={index} handleDeletItem={handleDeletItem} key={cart.product_id} cart={cart}></CartProduct>) : wishId.map((wishProduct, index) => <WishList index={index} handleDeleteWish={handleDeleteWish} key={wishProduct.product_id} wishProduct={wishProduct}></WishList>)
+                    toggle? cartId?.map((cart , index) => <CartProduct index={index} handleDeletItem={handleDeletItem} key={cart.product_id} cart={cart}></CartProduct>) : wishId.map((wishProduct, index) => <WishList index={index} handleDeleteWish={handleDeleteWish} key={wishProduct.product_id} handleWishAddCart={handleWishAddCart} wishProduct={wishProduct}></WishList>)
                 }
             </div>
         </div>

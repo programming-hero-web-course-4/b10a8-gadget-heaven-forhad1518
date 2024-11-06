@@ -1,7 +1,7 @@
 import React from 'react';
 
-const WishList = ({ wishProduct, handleDeleteWish, index }) => {
-    const { product_title, product_image, description, price } = wishProduct;
+const WishList = ({ wishProduct, handleDeleteWish, index, handleWishAddCart }) => {
+    const {product_id, product_title, product_image, description, price, availability } = wishProduct;
     return (
         <div className='bg-white rounded-xl p-4'>
             <div className="flex justify-between">
@@ -18,8 +18,11 @@ const WishList = ({ wishProduct, handleDeleteWish, index }) => {
                 <div>
                     <button onClick={() => handleDeleteWish(index)}><i className="fa-regular fa-circle-xmark text-red-600 text-2xl"></i></button>
                 </div>
+
             </div>
-            <div></div>
+            <div>
+                <button onClick={() => handleWishAddCart(product_id, price , index)} className={`${availability ? "font-bold text-white bg-[#9538E2] rounded-full py-1 px-3 text-center" : "hidden"}`}>Add To Card <i className="fa-solid fa-cart-shopping"></i></button>
+            </div>
         </div>
     );
 };

@@ -56,7 +56,15 @@ export default function Root() {
             setWishId(newWishItem)
         }
     }
-
+    // added wist to cart
+    const handleWishAddCart = (id, price, index) => {
+        handleCartBtn(id, price)
+        handleRemoveWish(index)
+    }
+    const handleRemoveWish = id => {
+        const removeWishItem = wishId.filter((itemD, index) => index !== id);
+        setWishId(removeWishItem);
+    }
     const handleDeletItem = (id, price) => {
         const deleteItem = cartId.filter((itemD, index) => index !== id);
         setCardId(deleteItem)
@@ -92,7 +100,7 @@ export default function Root() {
         <>
             <ContextGadgets.Provider value={allGedgets}>
                 <NavBar cartId={cartId} wishId={wishId} balance={balance}></NavBar>
-                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn]}></Outlet>
+                <Outlet context={[handleCartBtn, cartId, handleWishBtn, wishId, balance, handleDeletItem, handleDeleteWish, handleSortPriceBtn, handleWishAddCart]}></Outlet>
                 <Footer></Footer>
                 <ToastContainer></ToastContainer>
             </ContextGadgets.Provider>
